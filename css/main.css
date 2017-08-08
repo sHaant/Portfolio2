@@ -1,0 +1,378 @@
+/*=======================================================================
+GLOBAL STYLES
+========================================================================*/
+*{
+  box-sizing: border-box;
+}
+body{
+  margin:0;
+  font-family: Tahoma, Verdana, Segoe, sans-serif;
+}
+.top{
+  outline: none;
+  border:none;
+  position: fixed;
+  text-decoration: none;
+  font-size: 1.6rem;
+  bottom: 30px;
+  right: 30px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0,0,0,0.7);
+  z-index: 10000;
+}
+.typed-cursor{
+    display: none;
+}
+a{
+  color: #000;
+}
+a:hover{
+  text-decoration: none;
+}
+img{
+  width:100%;
+}
+.btn{
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-transform: uppercase;
+  outline:none;
+  color:#3d3d3d;
+  padding:0.5em 0.3em;
+  letter-spacing: 0.8px;
+  border: 3px solid #3d3d3d;
+  transition: all 0.2s ease-out;
+}
+.btn-inverse{
+  color: #fff;
+  border-color: #fff;
+}
+.btn:hover{
+  background: #2f5882;
+  border-color: #2f5882;
+  color:#fff;
+}
+.btn-inverse:hover{
+  background: #fff;
+  color: #0a1c2e;
+}
+.btn i{
+  font-size: 1.5em;
+}
+.text{
+  color: #4d4a4a;
+  font-size: 1.2em;
+  font-weight: 300;
+  line-height: 1.6;
+  font-family: Georgia, Times, 'Times New Roman', serif;
+}
+.card{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #939393;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  box-shadow: 1px 0px 2px rgba(0,0,0,0.7);
+}
+.tab{
+  display: flex;
+  align-items: center;
+  background: #2f5882;
+}
+.tab img{
+  margin: 0.4em;
+}
+.tab-title{
+  width:100%;
+  margin:0 auto;
+  font-size: 1.5em;
+  text-align: center;
+  color: #fff;
+}
+.tab-content{
+  padding:0 0.4em;
+}
+.bg-wrap{
+  background: linear-gradient(rgba(255,255,255, 0.8),rgba(255, 255, 255, 0.8)),
+              no-repeat center url('../img/ewan-robertson-208022.jpg');
+  background-size: cover;
+}
+/*=======================================================================
+HEADER
+========================================================================*/
+.navbar-top-fixed{
+  width:100%;
+  padding: 0.6em 0;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top:0;
+  z-index: 100;
+  background: #fff;
+}
+.navbar{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  max-width: 1199px;
+  margin:0 auto;
+  padding:0 0.7em;
+}
+.ham-container{
+  display: flex;
+  align-items: center;
+}
+#logo{
+  margin:0;
+  margin-right: auto;
+  font-weight: lighter;
+}
+.ham{
+  padding:0.2em 0.4em 0.4em 0.4em;
+  margin:0;
+  font-size: 1.3em;
+  font-weight: bolder;
+  outline: none;
+  border: 2px solid #3d3d3d;
+  border-radius: 8px;
+  background: none;
+}
+.ham:active{
+  background-color: #3d3d3d;
+  color: #fff;
+}
+.navbar-menu,
+.navbar-menu2{
+  list-style: none;
+  padding: 1.5rem 0 1rem 1em;
+  margin: 0;
+  background: #fff;
+}
+.navbar-menu li,
+.navbar-menu2 li{
+  padding: 0.7em 0;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85rem;
+  transform-origin: left bottom;
+  transition: all 0.3s ease-out;
+}
+.navbar-menu li:hover,
+.navbar-menu li:target,
+.navbar-menu2 li:hover,
+.navbar-menu2 li:target{
+  transform: translateX(1rem);
+}
+.navbar-menu a,
+.navbar-menu2 a{
+  text-decoration: none;
+  padding: inherit;
+  color: #696767;
+  transition: all 0.3s ease-out;
+}
+.navbar-menu a:hover,
+.navbar-menu2 a:hover{
+  color:#000;
+}
+.navbar-menu2{
+  display: none;
+}
+/*=======================================================================
+SECTION-intro
+========================================================================*/
+.intro{
+  margin-top: 53px;
+  width:100%;
+  min-height: calc(100vh - 42px);
+  background: linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.2)),
+              no-repeat center url('../img/nitish-meena-60677.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.lead{
+  font-size: 6rem;
+  color: aliceblue;
+  margin:0;
+  padding:0;
+  font-weight: lighter;
+}
+h1 .lead{
+  font-size: 20px;
+}
+.sublead{
+  font-size: 4rem;
+}
+.typing{
+  height:2.5rem;
+  font-family: sans-serif;
+  letter-spacing: 2px;
+  padding: 1em 0 0.6em 0;
+  color: aliceblue;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+.social-btn{
+  padding-top: 0.6em;
+  font-size: 2.5rem;
+  margin:0;
+}
+.social-btn a{
+  color:aliceblue;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+}
+.social-btn a:hover{
+  color: #f9da98;
+}
+
+/*=======================================================================
+SECTION-spanit
+========================================================================*/
+.spanit{
+  background: linear-gradient(45deg, #0a1c2e, #2768ab);
+  padding: 3em 0.5em;
+}
+.info-tab{
+  margin:0 auto;
+  max-width: 991px;
+}
+.spanit .info-tab div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spanit-logo{
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 12px;
+  font-weight: 100;
+  font-size: 2.5rem;
+  border: 1px solid #fff;
+  padding: 0.25em 0.35em;
+  margin:0;
+}
+.spanit-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.spanit-info .text{
+  color:#fff;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+/*=======================================================================
+FOOTER
+========================================================================*/
+footer {
+  background-color: #3d3d3d;
+  color: aliceblue;
+  padding: 1em 0;
+  font-size: 1.1em;
+}
+footer a{
+  color: aliceblue;
+  font-size: 1.3em;
+  margin-left: 10px;
+}
+.footer{
+  display: flex;
+  justify-content: flex-start;
+  align-content: center;
+  width:100%;
+  max-width: 1199px;
+  margin:0 auto;
+  padding: 0 0.2em;
+}
+/*=======================================================================
+-----------MEDIA-QUERY------------
+========================================================================*/
+@media screen and (min-width: 700px){
+  /*=======================================================================
+  FOOTER
+  ========================================================================*/
+  .footer{
+    justify-content: space-between;
+  }
+}
+@media screen and (min-width:991px){
+  .text{
+    font-size: 1.4em;
+  }
+  .title{
+    font-size: 3rem;
+  }
+  .bg-wrap{
+    background-attachment: fixed;
+  }
+  /*=======================================================================
+  HEADER
+  ========================================================================*/
+  #logo{
+    margin:0;
+  }
+  .ham{
+    display: none;
+  }
+  .ham-container{
+    margin-right: auto;
+  }
+  .navbar{
+    flex-direction: row;
+  }
+  .navbar-menu{
+    display: none;
+  }
+  .navbar-menu2{
+    display: flex;
+  }
+  .navbar-menu2 li{
+    font-family: sans-serif;
+    letter-spacing: 0.5px;
+    margin-left: 1em;
+    font-size: 0.95rem;
+    font-weight: 400;
+    transform-origin: center;
+  }
+  .navbar-menu2 li:hover,
+  .navbar-menu2 li:target{
+    transform: none;
+    transform: scaleY(1.15) scaleX(1.1);
+  }
+  .navbar-menu2 a:hover{
+    color:#000;
+  }
+  /*=======================================================================
+  SECTION-intro
+  ========================================================================*/
+  .intro{
+    margin-top: 80px;
+    /*background-attachment: fixed;*/
+  }
+  .lead{
+    font-size: 10rem;
+  }
+  .sublead{
+    font-size: 7rem;
+  }
+  .typing{
+    font-size: 2rem;
+  }
+  /*=======================================================================
+  SECTION-my-work
+  ========================================================================*/
+  .spanit-info{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
