@@ -378,6 +378,16 @@ footer a{
   }
 }
 
+.red{
+  background: red;
+  border: 1px solid black;
+  height: 20px;
+}
+
+.row{
+  min-width: 100%;
+}
+
 .foot{
   max-width: 100%;
   background-color: #1C1E1E;
