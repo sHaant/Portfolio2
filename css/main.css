@@ -29,6 +29,7 @@ body{
 .typed-cursor{
     display: none;
 }
+
 a{
   color: #000;
 }
@@ -375,4 +376,28 @@ footer a{
     flex-direction: row;
     justify-content: space-between;
   }
+}
+
+.foot{
+  max-width: 100%;
+  background-color: #1C1E1E;
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 0px;
+  padding: 50px;
+}
+
+.foot p{
+  color: #fff;
+  text-align: center;
+}
+
+.foot a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#bottom-bar{
+  width: 30px;
 }
